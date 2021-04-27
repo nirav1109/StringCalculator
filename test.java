@@ -15,4 +15,12 @@ public class StringCalculatorTest {
     public final void whenNonNumberIsUsedThenExceptionIsThrown() {
         StringCalculator.add("1,X");
     }
+
+
+    //For an empty string the method will return 0
+    @Test
+    public final void whenEmptyStringIsUsedThenReturnValueIs0() {
+    Assert.assertEquals(0, StringCalculator.add(""));
+}
+
 }
