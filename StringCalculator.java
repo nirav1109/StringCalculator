@@ -52,5 +52,20 @@ public class StringCalculator
         return returnValue;
     }
 
+    //Allow the Add method to handle an unknown amount of numbers
+    public static int add(final String numbers) 
+    {
+        int returnValue = 0;
+        String[] numbersArray = numbers.split(",");   
+        for (String number : numbersArray) 
+        {
+            if (!number.trim().isEmpty()) 
+            { 
+                returnValue += Integer.parseInt(number);
+            }
+        }
+        return returnValue;
+    }
+
 
 }
