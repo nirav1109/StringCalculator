@@ -19,8 +19,21 @@ public class StringCalculatorTest {
 
     //For an empty string the method will return 0
     @Test
-    public final void whenEmptyStringIsUsedThenReturnValueIs0() {
-    Assert.assertEquals(0, StringCalculator.add(""));
-}
+    public final void whenEmptyStringIsUsedThenReturnValueIs0() 
+    {
+        Assert.assertEquals(0, StringCalculator.add(""));
+    }
+
+    //Method will return their sum of numbers
+    @Test
+    public final void whenOneNumberIsUsedThenReturnValueIsThatSameNumber() 
+    {
+        Assert.assertEquals(3, StringCalculator.add("3"));
+    }    
+    @Test
+    public final void whenTwoNumbersAreUsedThenReturnValueIsTheirSum() 
+    {
+        Assert.assertEquals(3+6, StringCalculator.add("3,6"));
+    }
 
 }
